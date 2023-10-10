@@ -58,25 +58,37 @@
                 <h4>
                     <span class="text-code">"$_SESSION"</span> is used to save something until the browser closes.
                     If the user closes the tab and returns to the site, the saves session data will remain. Sessions
-                    will be removed after the user fuly closes their browser. To implement sessions into your site, 
+                    will be removed after the user fuly closes their browser. To implement sessions into your site,
                     add <span class="text-code">"session_start()"</span> so that sessions can be used
                 </h4>
                 <h4>
-                    <span class="text-code">"$_POST"</span> is used to pick the data from <a href="forms.html" class="active">FORMS</a> so that the server can process it.
+                    <span class="text-code">"$_POST"</span> is used to pick the data from <a href="forms.html"
+                        class="active">FORMS</a> so that the server can process it.
                     Click on the link to learn more about <span class="text-code">"$_POST"</span>
                 </h4>
                 <h4>
-                    Cookies are made with <span class="text-code">setcookie(name, value, expiration);</span>
+                    Cookies are made with <span class="text-code">setcookie(name, value, expiration);</span> 
+                    The "name" tag is the name of the cookie, fill value with whatever you want. 
+                    Expiration is the time until the cookie is automatically removed from the user's pc. 
+                    Cookies are saved, even when the browser is fully closed.
+
                 </h4>
                 <h4>To use sessions and cookies, watch these examples:</h4>
                 <code class="bg-code p-2 rounded" data-lang="php">
                     <p class="text-code text-aqua">&lt;?php</p>
                     <p class="text-code text-light"><span class="text-aqua">session_start()</span>;
-                        <span class="text-success">//opens a session in the site (IS REQUIRED)</span></p>
-                    <p class="text-code text-light"><span class="text-aqua">$_SESSION['name']</span> = <span class="text-success">"admin"</span>;
-                        <span class="text-success">//saves the "name" in session</span></p>
-                        <p class="text-code text-light"><span class="text-aqua">setcookie(</span><span class="text-success">"username", $_SESSION['name'], time() + 3600</span><span class="text-aqua">)</span>;
-                            <span class="text-success">//saves the cookie "name" for 1 hour (3600 seconds)</span></p>
+                        <span class="text-success">//opens a session in the site (IS REQUIRED)</span>
+                    </p>
+                    <p class="text-code text-light"><span class="text-aqua">$_SESSION['name']</span> = <span class="text-orange">"admin"</span>;
+                        <span class="text-success">//saves the "name" in session</span>
+                    </p>
+                    <p class="text-code text-light"><span class="text-aqua">setcookie(</span><span class="text-orange">"username", $_SESSION['name'], time() + 3600</span><span class="text-aqua">)</span>;
+                        <span class="text-success">//saves the cookie "name" for 1 hour (3600 seconds)</span>
+                    </p>
+                    <p class="text-code text-light"><span class="text-aqua">echo</span> <span class="text-orange">$_COOKIES['name']</span>;
+                        <span class="text-success">//shows the saved cookie
+                        </span>
+                    </p>
                 </code>
             </div>
         </div>
