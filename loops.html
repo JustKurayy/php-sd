@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP - Echo</title>
+    <title>PHP - Variables</title>
     <link rel="stylesheet" href="https://sirquandale.github.io/css_framework/style.css">
 </head>
 
@@ -36,8 +36,8 @@
         <div class="grid">
             <div class="col-6 border-right">
                 <h2><a href="index.html" class="btn">Home</a></h2>
-                <h2><a href="variables.html" class="btn">Variables</a></h2>
-                <h2><a href="echo.html" class="btn active">Echo (print)</a></h2>
+                <h2><a href="variables.html" class="btn active">Variables</a></h2>
+                <h2><a href="echo.html" class="btn">Echo (print)</a></h2>
                 <h2><a href="if.html" class="btn">If Statement</a></h2>
                 <h2><a href="container.html" class="btn">Loops</a></h2>
                 <h2><a href="container.html" class="btn">Functions</a></h2>
@@ -49,21 +49,20 @@
                 <h2><a href="container.html" class="btn">PHP Examples</a></h2>
             </div>
             <div class="col-6 ml-4 flex-column">
-                <h3>Echo</h3>
+                <h3>Variables</h3>
                 <h4>
-                    The PHP command "echo" is like <span class="text-code">console.log</span> in JavaScript, 
-                    but instead of showing in the console, it shows it on the site. It is more compareable to the 
-                    <span class="text-code">querySelector</span> in JavaScript.
+                    Variables are created by using <span class="bg-code text-aqua rounded p-2">"$"</span> 
+                    whilst declaring a variable, like <span class="bg-code text-aqua rounded p-2">$variable</span>
                 </h4>
-                <h4>To use an "echo", watch these examples:</h4>
+                <h4>To fill in a variable, watch these examples:</h4>
                 <code class="bg-code p-2 rounded" data-lang="php">
                     <p class="text-code text-aqua">&lt;?php</p>
-                    <p class="text-code text-light"><span class="text-aqua">echo</span> <span class="text-success">"test"</span>;
-                        <span class="text-success">//shows "test" on the site</span></p>
-                    <p class="text-code text-light"><span class="text-aqua">echo</span> <span class="text-success">"&lt;h1&gt;Hello World&lt;/h1&gt;"</span>;
-                        <span class="text-success">//shows "Hello World" in a h1 html tag. Like the querySelector, you can add html code through echo</span></p>
-                    <!-- <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-success">true</span>;
-                        <span class="text-success">//boolean</span></p> -->
+                    <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-success">"test"</span>;
+                        <span class="text-success">//string</span></p>
+                    <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-success">1</span>;
+                        <span class="text-success">//int</span></p>
+                    <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-success">true</span>;
+                        <span class="text-success">//boolean</span></p>
                 </code>
             </div>
         </div>
