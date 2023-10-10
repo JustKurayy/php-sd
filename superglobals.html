@@ -75,10 +75,8 @@
                         <span class="text-success">//opens a session in the site (IS REQUIRED)</span></p>
                     <p class="text-code text-light"><span class="text-aqua">$_SESSION['name']</span> = <span class="text-success">"admin"</span>;
                         <span class="text-success">//saves the "name" in session</span></p>
-                    <!-- <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-success">1</span>;
-                        <span class="text-success">//int</span></p> -->
-                    <!-- <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-success">true</span>;
-                        <span class="text-success">//boolean</span></p> -->
+                        <p class="text-code text-light"><span class="text-aqua">setcookie(</span><span class="text-success">"username", $_SESSION['name'], time() + 3600</span><span class="text-aqua">)</span>;
+                            <span class="text-success">//saves the cookie "name" for 1 hour (3600 seconds)</span></p>
                 </code>
             </div>
         </div>
