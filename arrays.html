@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP - Variables</title>
+    <title>PHP - Arrays</title>
     <link rel="stylesheet" href="https://sirquandale.github.io/css_framework/style.css">
 </head>
 
@@ -36,12 +36,12 @@
         <div class="grid">
             <div class="col-6 border-right">
                 <h2><a href="index.html" class="btn">Home</a></h2>
-                <h2><a href="variables.html" class="btn active">Variables</a></h2>
+                <h2><a href="variables.html" class="btn">Variables</a></h2>
                 <h2><a href="echo.html" class="btn">Echo (print)</a></h2>
                 <h2><a href="if.html" class="btn">If Statement</a></h2>
                 <h2><a href="loops.html" class="btn">Loops</a></h2>
                 <h2><a href="function.html" class="btn">Functions</a></h2>
-                <h2><a href="arrays.html" class="btn">Arrays</a></h2>
+                <h2><a href="arrays.html" class="btn active">Arrays</a></h2>
                 <h2><a href="superglobals.html" class="btn">Superglobals</a></h2>
                 <h2><a href="container.html" class="btn">Forms</a></h2>
                 <h2><a href="container.html" class="btn">Include</a></h2>
@@ -49,22 +49,26 @@
                 <h2><a href="container.html" class="btn">PHP Examples</a></h2>
             </div>
             <div class="col-6 ml-4 flex-column">
-                <h3>Variables</h3>
+                <h3>Arrays</h3>
                 <h4>
-                    Variables are created by using <span class="bg-code text-aqua rounded p-2">"$"</span> 
-                    whilst declaring a variable, like <span class="bg-code text-aqua rounded p-2">$variable</span>
+                    Arrays are defined like a variable. You create a variable and use <span class="text-code">"array()"</span> 
+                    as the value of the array <span class="text-code">"$variable = array(1, 2, 3)"</span>
                 </h4>
                 <h4>To fill in a variable, watch these examples:</h4>
                 <code class="bg-code p-2 rounded" data-lang="php">
                     <p class="text-code text-aqua">&lt;?php</p>
-                    <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-orange">"test"</span>;
-                        <span class="text-success">//string</span>
+                    <p class="text-code text-light"><span class="text-aqua">$int</span> = <span class="text-light">array(<span class="text-orange">1, 2, 3</span>)</span>;
+                        <span class="text-success">//int array</span>
                     </p>
-                    <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-orange">1</span>;
-                        <span class="text-success">//int</span>
+                    <p class="text-code text-light"><span class="text-aqua">$string</span> = <span class="text-light">array(<span class="text-orange">"s1", "s2", "s3"</span>)</span>;
+                        <span class="text-success">//string array</span>
                     </p>
-                    <p class="text-code text-light"><span class="text-aqua">$variable</span> = <span class="text-orange">true</span>;
-                        <span class="text-success">//boolean</span>
+                </code>
+                <h4>You can recall arrays with a <span class="text-code">[ ]</span> after a variable like this:</h4>
+                <code class="bg-code p-2 rounded">
+                    <p class="text-code text-light">
+                        <span class="text-aqua">echo</span> <span class="text-orange">$string[0]</span>;
+                        <span class="text-success">//outputs: "s1"</span>
                     </p>
                 </code>
             </div>
