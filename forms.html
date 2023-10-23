@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP - Forms</title>
+    <link rel="stylesheet" href="https://sirquandale.github.io/css_framework/style.css">
+</head>
+
+<body class="overflow-x-none">
+    <header class="container shadow-sm mb-4">
+        <div class="container-lg nav align-items-center">
+            <h2>
+                <a href="index.html">PHP-SD</a>
+            </h2>
+            <ul class="nav-list gap-4 justify-content-end mr-3">
+                <li>
+                    <a href="attributes.html" class="hover-line">Attributes</a>
+                </li>
+                <li>
+                    <a href="#" class="">No Hover Effect</a>
+                </li>
+                <li>
+                    <a href="#" class="">Another</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container-lg">
+        <h1>Select PHP Subject</h1>
+    </div>
+
+    <div class="container-lg flex-column">
+        <div class="grid">
+            <div class="col-6 border-right">
+                <h2><a href="index.html" class="btn active">Home</a></h2>
+                <h2><a href="variables.html" class="btn">Variables</a></h2>
+                <h2><a href="echo.html" class="btn">Echo (print)</a></h2>
+                <h2><a href="if.html" class="btn">If Statement</a></h2>
+                <h2><a href="loops.html" class="btn">Loops</a></h2>
+                <h2><a href="function.html" class="btn">Functions</a></h2>
+                <h2><a href="arrays.html" class="btn">Arrays</a></h2>
+                <h2><a href="superglobals.html" class="btn">Superglobals</a></h2>
+                <h2><a href="forms.html" class="btn">Forms</a></h2>
+                <h2><a href="container.html" class="btn">Include</a></h2>
+                <h2><a href="container.html" class="btn">MySQL</a></h2>
+                <h2><a href="container.html" class="btn">PHP Examples</a></h2>
+            </div>
+            <div class="col-6 ml-4 flex-column">
+                <h3>Forms</h3>
+                <h4>
+                    Forms are used to get information from users. We can use the <span class="text-code">$_POST</span> tag to pick up the
+                    information filled in the forms from input and process them.
+                </h4>
+                <h4>
+                    In HTML, use the &lt;form&gt; tag to make a form. Inside use &lt;input&gt; and give it a name="" tag. 
+                    With a name given to the input, the <span class="text-code">$_POST</span> can now search for it. 
+                    Make a submit button so we can send the information to the server. Instead of isset($_POST['submit']), 
+                    I use $_SERVER['REQUEST_METHOD'] to see whether a request was made to the server.
+                    Because isset($_POST['submit']) can sometimes load whether or not you clicked the submit button or not.
+                </h4>
+                <p>The code below provides an example of a form with PHP:</p>
+                <code class="bg-code p-2 text-light rounded">
+                    <p>
+                        <span class="text-aqua">&lt;?php</span>
+                    </p>
+                    <p class="text-code text-light"><span class="text-aqua">if</span> (<span class="text-orange">$_SERVER['REQUEST_METHOD'] == "post"</span>) &#123;
+                        <span class="text-success">//triggers if we press the submit button</span></p>
+                    <p class="text-code text-light ml-4"><span class="text-aqua">echo</span> <span class="text-orange">$_POST['test']</span>;
+                        <span class="text-success">//shows the filled input on site</span></p>
+                    <p class="text-code text-light"><span class="text-aqua">&#125;</span>;</p>
+                    <p>
+                        <span class="text-aqua">?&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;!<span class="text-aqua">DOCTYPE html</span>&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;<span class="text-aqua">html lang="en"</span>&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;<span class="text-aqua">head</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-4">
+                        <span class="text-gray">&lt;<span class="text-aqua">title</span>&gt;</span>form example<span class="text-gray">&lt;/<span class="text-aqua">title</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-4">
+                        <span class="text-gray">&lt;<span class="text-aqua">link</span> <span class="text-orange">rel="stylesheet" href="https://sirquandale.github.io/css_framework/style.css"</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-4">
+                        <span class="text-success">&lt;!-- the framework used in this site, made by me of course --&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;/<span class="text-aqua">head</span>&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;<span class="text-aqua">body</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-4">
+                        <span class="text-gray">&lt;<span class="text-aqua">form method="post"</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-5">
+                        <span class="text-gray">&lt;<span class="text-aqua">input type="text" name="test"</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-5">
+                        <span class="text-gray">&lt;<span class="text-aqua">button type="submit"</span>&gt;</span>Submit<span class="text-gray">&lt;<span class="text-aqua">button</span>&gt;</span>
+                    </p>
+                    <p class="text-code ml-4">
+                        <span class="text-gray">&lt;/<span class="text-aqua">form</span>&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;/<span class="text-aqua">body</span>&gt;</span>
+                    </p>
+                    <p class="text-code">
+                        <span class="text-gray">&lt;/<span class="text-aqua">html</span>&gt;</span>
+                    </p>
+                </code>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
